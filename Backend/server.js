@@ -8,7 +8,12 @@ import { fileURLToPath } from 'url';
 const app = express();
 const prisma = new PrismaClient();
 
-app.use(cors()); // Permite requisições de outros domínios
+app.use(
+  cors({
+    origin: 'https://portfolio-6e8a.onrender.com', // Substitua pelo domínio do frontend
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  })
+);
 app.use(express.json()); // Middleware para suportar JSON no corpo das requisições
 
 // Rota para criar usuários no banco de dados
@@ -47,18 +52,19 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Middleware para servir os arquivos estáticos do frontend
-const frontendPath = path.resolve(__dirname, '../Frontend/dist');
+const frontendPath = path.join(__dirname, '../Frontend/dist');
 app.use(express.static(frontendPath));
 
-// Rota fallback para React Router (rota padrão do frontend)
+// Rota fallback para React Router (verifica se o diretório existe)
 app.get('*', (req, res) => {
   const indexPath = path.join(frontendPath, 'index.html');
-  res.sendFile(indexPath, (err) => {
-    if (err) {
-      console.error(`Erro ao servir o arquivo index.html: ${err.message}`);
-      res.status(500).send('Erro interno ao carregar o frontend.');
-    }
-  });
+
+  if (!path.existsSync(indexPath)) {
+    console.error(`Arquivo não encontrado: ${indexPath}`);
+    return res.status(404).send('Frontend não encontrado.');
+  }
+
+  res.sendFile(indexPath);
 });
 
 // Inicializa o servidor na porta 3000
