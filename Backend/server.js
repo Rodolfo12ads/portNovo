@@ -8,12 +8,7 @@ import { fileURLToPath } from 'url';
 const app = express();
 const prisma = new PrismaClient();
 
-app.use(
-  cors({
-    origin: 'https://portfolio-6e8a.onrender.com', // Substitua pelo domínio do frontend
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  })
-);
+app.use(cors()); // Permite requisições de outros domínios
 app.use(express.json()); // Middleware para suportar JSON no corpo das requisições
 
 // Rota para criar usuários no banco de dados
