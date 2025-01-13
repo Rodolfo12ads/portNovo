@@ -1,0 +1,259 @@
+/* Home.module.css */
+
+/* Container principal */
+.container {
+  display: flex;
+  height: 530px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  padding: 0.5em;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  width: 25%;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 2px  0 5px rgba(0, 0, 0, 0.9);
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.sidebar p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.portfolioLink {
+  color: #f0c040;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.portfolioLink:hover {
+  text-decoration: underline;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  margin-top: 3em;
+  font-size: 1.9rem;
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.7);
+}
+
+.email {
+  color: #f0c040;
+}
+
+.linkedin {
+  color: #0077B5;
+}
+
+.github {
+  color: #f33232;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #f0c040;
+  margin:30px 350px 40px 6px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.highlightSection {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.highlightSection h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.skills {
+  margin-top: 20px;
+}
+
+.skills h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skillTags span {
+  background: #f0c040;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Fundo animado */
+.backgroundAnimation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca atrás do conteúdo */
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+.box {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: white; /* Cor dourada com transparência */
+  border-radius: 10px;
+  animation: floatBox 10s infinite ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Animação das caixas */
+@keyframes floatBox {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50vw, 100vh) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Configuração de posições iniciais */
+.box:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.box:nth-child(2) {
+  top: 30%;
+  left: 40%;
+}
+
+.box:nth-child(3) {
+  top: 50%;
+  left: 20%;
+}
+
+.box:nth-child(4) {
+  top: 70%;
+  left: 50%;
+}
+
+.box:nth-child(5) {
+  top: 90%;
+  left: 80%;
+}
+
+/* Responsividade */
+
+/* Para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .mainContent {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+    margin: 30px 0 20px;
+  }
+
+  .highlightSection h2,
+  .skills h2 {
+    font-size: 1.6rem;
+  }
+
+  .features li {
+    font-size: 1rem;
+  }
+
+  .box {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.8rem;
+    margin: 20px 0 10px;
+  }
+
+  .sidebar h2 {
+    font-size: 1.2rem;
+  }
+
+  .sidebar p,
+  .portfolioLink,
+  .features li {
+    font-size: 0.9rem;
+  }
+
+  .skillTags span {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .box {
+    width: 120px;
+    height: 120px;
+  }
+}

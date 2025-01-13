@@ -1,0 +1,155 @@
+/* Container principal */
+.container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #f0c040;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.photoCard {
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.photoCard:hover {
+    transform: scale(1.05);
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Fundo animado */
+.backgroundAnimation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca atrás do conteúdo */
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+.box {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: white; /* Cor dourada com transparência */
+    border-radius: 10px;
+    animation: floatBox 10s infinite ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Animação das caixas */
+@keyframes floatBox {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(50vw, 100vh) scale(0.5);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* Configuração de posições iniciais das caixas animadas */
+.box:nth-child(1) {
+    top: 10%;
+    left: 10%;
+}
+
+.box:nth-child(2) {
+    top: 30%;
+    left: 40%;
+}
+
+.box:nth-child(3) {
+    top: 50%;
+    left: 20%;
+}
+
+.box:nth-child(4) {
+    top: 70%;
+    left: 50%;
+}
+
+.box:nth-child(5) {
+    top: 90%;
+    left: 80%;
+}
+
+/* Responsividade */
+
+/* Para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .gallery {
+        gap: 15px;
+    }
+
+    .photoCard {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .photoCard {
+        width: 100%;
+        max-width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .photo {
+        height: 200px;
+    }
+
+    .box {
+        width: 120px;
+        height: 120px;
+    }
+}

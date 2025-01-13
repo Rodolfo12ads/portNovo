@@ -1,0 +1,334 @@
+/* Container principal */
+.container {
+  padding: 20px;
+  margin-left: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Navegação */
+.nav ul {
+  width: 200px;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 20px;
+  background-color: #5756548d;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.nav li {
+  color: #f0c040;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Seção de Projetos */
+.projects {
+  margin-bottom: 40px;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f0c040;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que os projetos se ajustem para uma nova linha */
+}
+
+.projectCard {
+  width: 250px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projectCard a{
+  text-align: center;
+  margin: 0;
+}
+
+.photo {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 1em;
+  justify-content: center;
+  color: #f0c040;
+}
+
+/* Seção de Vídeos */
+.videos {
+  margin-top: 40px;
+}
+
+.videos h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f0c040;
+}
+
+.videoGallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.videoGallery::-webkit-scrollbar {
+  display: none;
+}
+
+.videoCard {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.videoCard.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 1000;
+  width: 80%; /* Tamanho ampliado */
+  height: auto;
+  background: rgba(0, 0, 0, 0.8); /* Fundo para destaque */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.videoCard video,
+.videoCard iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção */
+  border-radius: 10px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.modalContent {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  background: #000;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modalVideo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Cursos */
+.cursos {
+  margin: 20px 0;
+  padding: 10px;
+  color: #deb54c;
+}
+
+.cursos p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  padding: 5px;
+  color: #fff;
+}
+
+/* Ícones */
+.icon {
+  margin-top: 1em;
+  font-size: 1.9rem;
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.7);
+}
+
+/* Fundo animado */
+.backgroundAnimation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca atrás do conteúdo */
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+.box {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: white; /* Cor dourada com transparência */
+  border-radius: 10px;
+  animation: floatBox 10s infinite ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Animação das caixas */
+@keyframes floatBox {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50vw, 100vh) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Configuração de posições iniciais das caixas animadas */
+.box:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.box:nth-child(2) {
+  top: 30%;
+  left: 40%;
+}
+
+.box:nth-child(3) {
+  top: 50%;
+  left: 20%;
+}
+
+.box:nth-child(4) {
+  top: 70%;
+  left: 50%;
+}
+
+.box:nth-child(5) {
+  top: 90%;
+  left: 80%;
+}
+
+/* Responsividade */
+
+/* Para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+  /* Navegação */
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav li {
+    font-size: 24px;
+  }
+
+  /* Galeria de Projetos */
+  .gallery {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .projectCard {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+
+  /* Vídeos */
+  .videoGallery {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .videoCard {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .videoCard.expanded {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Modal */
+  .modalContent {
+    width: 90%;
+    max-width: 1000px;
+  }
+
+  .modalVideo {
+    height: 300px;
+  }
+}
+
+/* Para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  /* Navegação */
+  .nav li {
+    font-size: 20px;
+  }
+
+  /* Projetos e Vídeos */
+  .projectCard,
+  .videoCard {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .photo {
+    height: 200px; /* Ajusta a altura das fotos */
+  }
+
+  .videoCard iframe,
+  .videoCard video {
+    height: 150px; /* Ajusta a altura dos vídeos */
+  }
+
+  /* Modal */
+  .modalContent {
+    width: 100%;
+  }
+
+  .modalVideo {
+    height: 200px;
+  }
+
+  /* Ícones */
+  .icon {
+    font-size: 1.5rem;
+  }
+}

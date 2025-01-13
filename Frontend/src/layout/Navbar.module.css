@@ -1,0 +1,60 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Container do nav */
+  .navContainer {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Lista de links */
+  .list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo dos links */
+  .item a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ecf0f1;
+    transition: color 0.3s, transform 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Hover e Foco */
+  .item a:hover,
+  .item a:focus {
+    color: #f1c40f;
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .list {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .item a {
+      font-size: 1rem;
+    }
+  }
+  
