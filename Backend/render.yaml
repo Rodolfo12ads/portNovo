@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: backend
+    env: node
+    region: oregon # Escolha a região mais próxima
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: DATABASE_URL
+        value: <sua string de conexão do Prisma>

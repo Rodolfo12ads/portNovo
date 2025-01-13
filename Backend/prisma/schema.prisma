@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+//depois de ter intalado e configurado o prisma
+//npm install prisma --save-dev
+//npx prisma init
+// depois de ter configurado o banco abaixo use o comando para subir para o prisma npx prisma db push
+// npm install @prisma/client nao esquecer de intalar 
+// para ver o banco npx prisma studio 
+// agora vai importa o prisma no projeto server.js exemplo abaixo
+
+//import { PrismaClient } from '@prisma/client'
+//const prisma = new PrismaClient()
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  nome          String
+  git           String
+  linkedin      String
+  gmail         String
+}
+
+
