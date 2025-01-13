@@ -63,7 +63,7 @@ app.get('*', (req, res) => {
 });
 
 // Inicializa o servidor na porta 3000
-const PORT = process.env.PORT || 3000; // Suporte para variáveis de ambiente
+const PORT = process.env.PORT || 10000; // Suporte para variáveis de ambiente
 app.listen(PORT, async () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 
