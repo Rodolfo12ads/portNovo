@@ -35,7 +35,7 @@ function Home() {
       <aside className={styles.sidebar}>
         <h2>Sobre Mim</h2>
         <p>
-          Olá meu nome é {user ? user.nome : "Carregando..."}.
+          Olá meu nome é {user ? user.nome : "Rodolfo"}.
           Sou um desenvolvedor Fullstack especializado em criar experiências
           digitais interativas e modernas, utilizando tecnologias como React,
           Node.js, e MongoDB.
