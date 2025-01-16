@@ -5,24 +5,27 @@
   font-family: Arial, sans-serif;
 }
 
-/* Navegação */
-.nav ul {
-  width: 200px;
-  display: flex;
-  gap: 20px;
+/* Botao de de cursos */
+.nav button {
+  width: 210px;
   list-style: none;
   margin-bottom: 20px;
-  background-color: #5756548d;
+  background-color: #5754548d;
   border-radius: 10px;
-  padding: 10px;
-}
-
-.nav li {
+  padding: 7px;
   color: #f0c040;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
 }
+.divider {
+  border-top: 0.1em solid #eeeaea3b;
+  margin: 10px 8px;
+  width: 100%;
+  
+}
+
+
 
 /* Seção de Projetos */
 .projects {
@@ -55,7 +58,7 @@
 .photo {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }
 
 .skillTags {
@@ -99,6 +102,7 @@
   transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
   cursor: pointer;
   border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
 }
 
 .videoCard.expanded {
@@ -177,6 +181,22 @@
 
 .icon:hover {
   transform: scale(1.7);
+}
+
+.logo {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  display:inline;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  
+}
+
+.cursos h2 a img {
+  margin: 0;
+  padding: 0;
 }
 
 /* Fundo animado */

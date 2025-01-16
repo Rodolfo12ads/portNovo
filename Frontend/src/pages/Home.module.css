@@ -1,5 +1,7 @@
 /* Home.module.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* Container principal */
 .container {
   display: flex;
@@ -15,7 +17,7 @@
   width: 25%;
   padding: 20px;
   height: 100%;
-  box-shadow: 2px  0 5px rgba(0, 0, 0, 0.9);
+
 }
 
 .sidebar h2 {
@@ -26,6 +28,7 @@
 .sidebar p {
   margin: 10px 0;
   line-height: 1.6;
+  color: #f5ececa9;
 }
 
 .portfolioLink {
@@ -75,21 +78,27 @@
 }
 
 .header h1 {
+  font-family: "Great Vibes", serif;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
-  font-size: 3rem;
+  font-size: 9rem;
   color: #f0c040;
   margin:30px 350px 40px 6px;
 }
 
 .header p {
+  margin-left: 2em;
   font-size: 1.2rem;
   line-height: 1.6;
+  color: #f5ececa9;
 }
 
 .highlightSection {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
+  width: 1000px;
 }
 
 .highlightSection h2 {
@@ -124,10 +133,11 @@
 
 .skillTags span {
   background: #f0c040;
-  color: #333;
+  color: #060404f2;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 0.9rem;
+  font-weight:700;
 }
 
 /* Fundo animado */
@@ -196,32 +206,57 @@
 /* Para telas menores que 768px (tablets e celulares) */
 @media (max-width: 768px) {
   .container {
+    position: relative;
+    display:  flex;
     flex-direction: column;
     height: auto;
   }
 
   .sidebar {
+    margin-top: 750px;
     width: 100%;
     padding: 10px;
     box-shadow: none;
   }
 
   .mainContent {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
     padding: 20px;
   }
+ 
 
   .header h1 {
-    font-size: 2.2rem;
-    margin: 30px 0 20px;
+    font-size: 8rem;
+    margin: 60px 0 20px;
+  }
+  .header p {
+    font-size: 17px;
+    text-align: center;
+  }
+  .highlightSection{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
   }
 
+  .skills{
+    margin-top: 400px;
+  }
   .highlightSection h2,
   .skills h2 {
+    
     font-size: 1.6rem;
+    text-align: center;
+    
   }
 
   .features li {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .box {
@@ -232,8 +267,21 @@
 
 /* Para telas menores que 480px (celulares pequenos) */
 @media (max-width: 480px) {
+  .container {
+    position: relative;
+
+  }
+  .mainContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .sidebar {
+    margin-top: 600px; /* Ajuste conforme necessário */
+  }
   .header h1 {
-    font-size: 1.8rem;
+    font-size: 5rem;
     margin: 20px 0 10px;
   }
 

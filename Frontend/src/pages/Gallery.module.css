@@ -1,11 +1,11 @@
 /* Container principal */
 .container {
-    padding: 20px;
+    padding: 30px;
     font-family: Arial, sans-serif;
 }
 
 h1 {
-    text-align: center;
+    
     color: #f0c040;
     margin-bottom: 30px;
 }
@@ -37,7 +37,7 @@ h1 {
 
 p {
     font-size: 1rem;
-    color: #555;
+    color: #9d9797;
     margin-top: 10px;
 }
 

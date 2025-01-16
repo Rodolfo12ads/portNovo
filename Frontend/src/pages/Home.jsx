@@ -24,21 +24,17 @@ function Home() {
 
   return (
     <div className={styles.container}>
-      {/* Fundo animado */}
       <div className={styles.backgroundAnimation}>
         {[...Array(10)].map((_, i) => (
           <div key={i} className={styles.box}></div>
         ))}
       </div>
-
-      {/* Conteúdo existente */}
       <aside className={styles.sidebar}>
         <h2>Sobre Mim</h2>
         <p>
-          Olá meu nome é {user ? user.nome : "Rodolfo"}.
-          Sou um desenvolvedor Fullstack especializado em criar experiências
-          digitais interativas e modernas, utilizando tecnologias como React,
-          Node.js, e MongoDB.
+          Olá, meu nome é {user ? user.nome : "Rodolfo"},
+          estou iniciando minha jornada como desenvolvedor Fullstack,
+           aprendendo a criar experiências digitais modernas e interativas.
         </p>
         <p>
           Descubra mais sobre meu trabalho:{" "}
@@ -48,7 +44,7 @@ function Home() {
         </p>
         <div className={styles.socialIcons}>
           <a
-            href={`mailto:${user ? user.email : "seuemail@exemplo.com"}`}
+            href={user ? user.email : "email@gmail.com"}
             className={`${styles.icon} ${styles.email}`}
             aria-label="Enviar Email"
           >
@@ -86,15 +82,13 @@ function Home() {
           <h2>Por que Escolher-me?</h2>
           <ul className={styles.features}>
             <li>
-              <strong>Experiência Profissional:</strong> Mais de 2 anos em
-              desenvolvimento Fullstack.
+              <strong>Início Promissor:</strong> Começando minha jornada no desenvolvimento Fullstack.
             </li>
             <li>
-              <strong>Abordagem Criativa:</strong> Design de interfaces modernas e intuitivas.
+              <strong>Abordagem Criativa:</strong> Buscando desenvolvimento em Design de interfaces modernas e intuitivas.
             </li>
             <li>
-              <strong>Habilidades Técnicas:</strong> React, Node.js, MongoDB, e
-              muito mais.
+              <strong>Aprendizado Contínuo:</strong> Explorando tecnologias como React, Node.js, MongoDB, e muito mais.
             </li>
           </ul>
         </section>

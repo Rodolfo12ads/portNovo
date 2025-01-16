@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { AiFillGithub } from "react-icons/ai";
+
+import logo from '../assets/youtube_logo.png';
+import udemy_logo from '../assets/udemy_logo.png';
+
+import { AiFillGithub } from "react-icons/ai"
 import styles from "./Portifolio.module.css";
 
 function Portfolio() {
@@ -22,16 +26,19 @@ function Portfolio() {
         ))}
       </div>
       <nav className={styles.nav}>
-        <ul>
-          <li onClick={() => setShowCursos(!showCursos)}>Cursos Online</li>
-        </ul>
+        <button onClick={() => setShowCursos(!showCursos)}>{!showCursos ? 'Exibir Cursos' : 'Fechar'}</button>
       </nav>
 
       {showCursos && (
         <div className={styles.cursos}>
-          <h2>Matheus Battisti - Hora de Codar</h2>
+          <h2>Matheus Battisti - Hora de Codar <a href="https://www.youtube.com/watch?v=FXqX7oof0I4&t=1s"
+            target="_blank"><img className={styles.logo} src={logo} alt=" logo youtube" /></a>
+          </h2>
           <p>Curso React</p>
-          <h2>Luiz Otávio Miranda</h2>
+          <div className={styles.divider}></div>
+          <h2>Luiz Otávio Miranda <a href="https://www.udemy.com/course/curso-de-javascript-moderno-do-
+          // basico-ao-avancado/?couponCode=KEEPLEARNINGBR"
+            target="_blank"><img className={styles.logo} src={udemy_logo} alt="logo udemy" /></a></h2>
           <p>
             JavaScript e TypeScript - front-end e back-end Full Stack Node,
             Express, noSQL, React, hooks, Redux, Design Patterns.
