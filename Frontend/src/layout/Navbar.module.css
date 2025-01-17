@@ -140,6 +140,90 @@
   }
 }
 
+@media (max-width: 480px) {
+  .buttonCollapse {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem; /* Diminuir o tamanho do ícone */
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Aumenta a largura para preencher mais a tela */
+    background-color: #333333ee;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-align: center;
+  }
+
+  .menuMobile {
+    opacity: 1;
+    visibility: visible;
+    max-height: 400px;
+    padding: 15px;
+  }
+
+  .item {
+    margin: 10px 0;
+    background: #111010;
+    border-radius: 10px;
+    width: 100%; /* Largura total da tela */
+    height: 50px;
+    padding: 8px;
+  }
+
+  .item a {
+    text-align: center;
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.3rem; /* Ajuste o tamanho da fonte para telas menores */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 10px;
+  }
+
+  .item a:hover {
+    color: #f1c40f;
+  }
+
+  .navbar {
+    background-color: transparent;
+    padding: 10px 15px; /* Ajustar o padding para telas menores */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  body.menuOpen {
+    overflow: hidden; /* Evita rolagem enquanto o menu está aberto */
+  }
+}
+
+
 
 
 
