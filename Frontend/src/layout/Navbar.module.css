@@ -109,17 +109,19 @@
     text-align: center;
     text-decoration: none;
     color: #ecf0f1;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Ajuste o tamanho da fonte para telas menores */
     font-weight: bold;
-    transition: color 0.3s ease;
-
+    transition: color 0.7s ease, opacity 0.7s ease; /* Transição de cor e opacidade */
+    
   }
 
-
-  .item a:hover {
-    color: #f1c40f;
+  .item a:hover, 
+  .item a:focus, 
+  .item a:active {
+    color: #f1c40f; /* Cor quando em hover, focus ou ativo */
+    background: #111010; /* Cor de fundo opcional */
+    opacity: 0.7; /* Reduz a opacidade, fazendo o link desaparecer parcialmente */
   }
-
   .navbar {
     background-color: transparent;
     padding: 10px 20px;
@@ -182,7 +184,7 @@
 
   .item {
     margin: 10px 0;
-    background: #111010;
+    background-color: #111010;
     border-radius: 10px;
     width: 100%; /* Largura total da tela */
     height: 50px;
@@ -193,15 +195,20 @@
     text-align: center;
     text-decoration: none;
     color: #ecf0f1;
-    font-size: 1.3rem; /* Ajuste o tamanho da fonte para telas menores */
+    font-size: 1.5rem; /* Ajuste o tamanho da fonte para telas menores */
     font-weight: bold;
-    transition: color 0.3s ease;
-    padding: 10px;
+    transition: color 0.7s ease, opacity 0.7s ease; /* Transição de cor e opacidade */
+    
   }
 
-  .item a:hover {
-    color: #f1c40f;
+  .item a:hover, 
+  .item a:focus, 
+  .item a:active {
+    color: #f1c40f; /* Cor quando em hover, focus ou ativo */
+    background: #111010; /* Cor de fundo opcional */
+    opacity: 0.7; /* Reduz a opacidade, fazendo o link desaparecer parcialmente */
   }
+  
 
   .navbar {
     background-color: transparent;
