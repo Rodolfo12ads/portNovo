@@ -1,60 +1,148 @@
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+  background-color: transparent;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: 15px;
+ 
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
   
-  /* Container do nav */
-  .navContainer {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+/* Lista de links */
+.list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.item a {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s ease;
+}
+
+.item a:hover {
+  color: #f1c40f;
+}
+
+/* Botão de menu para telas menores */
+.buttonCollapse {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .buttonCollapse {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 20px;
   }
-  
-  /* Lista de links */
+
   .list {
-    list-style: none;
     display: flex;
-    gap: 30px;
-    margin: 0;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: #333333ee;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     padding: 0;
+    opacity: 0; /* Invisível inicialmente */
+    visibility: hidden; /* Fora do fluxo visual */
+    max-height: 0; /* Altura inicial (fechado) */
+    overflow: hidden; /* Esconde o conteúdo */
+    transition: all 0.4s ease; /* Suave abertura */
+    text-align: center;
+    align-items: center;
+
+
   }
-  
-  /* Estilo dos links */
+
+
+  .menuMobile {
+    opacity: 1; /* Torna visível */
+    visibility: visible; /* Aparece no fluxo visual */
+    max-height: 400px; /* Define altura suficiente para os itens */
+    padding: 20px; /* Adiciona espaçamento interno */
+  }
+
+  .item {
+    margin: 10px 0;
+    background: #111010;
+    border-radius: 10px;
+    width: 220px;
+    height: 50px;
+    padding: 8px;
+
+  }
+
   .item a {
+    text-align: center;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
     color: #ecf0f1;
-    transition: color 0.3s, transform 0.3s ease;
-    padding: 5px 10px;
-    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
   }
-  
-  /* Hover e Foco */
-  .item a:hover,
-  .item a:focus {
+
+
+  .item a:hover {
     color: #f1c40f;
-    transform: scale(1.1);
-    background-color: rgba(255, 255, 255, 0.1);
   }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .list {
-      flex-direction: column;
-      gap: 15px;
-    }
-  
-    .item a {
-      font-size: 1.3rem;
-    }
+
+  .navbar {
+    background-color: transparent;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+
+  .navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  body.menuOpen {
+    overflow: hidden; /* Evita rolagem enquanto o menu está aberto */
+  }
+}
+
+
+
+
+
   
+

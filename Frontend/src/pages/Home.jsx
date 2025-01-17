@@ -45,6 +45,8 @@ function Home() {
         <div className={styles.socialIcons}>
           <a
             href={user ? user.email : "email@gmail.com"}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`${styles.icon} ${styles.email}`}
             aria-label="Enviar Email"
           >
@@ -72,7 +74,7 @@ function Home() {
       </aside>
       <main className={styles.mainContent}>
         <header className={styles.header}>
-          <h1>Bem-vindo</h1>
+          <h1 translate="no">Bem-vindo</h1>
           <p>
             Transformo ideias em realidade com projetos que unem inovação,
             funcionalidade e design.

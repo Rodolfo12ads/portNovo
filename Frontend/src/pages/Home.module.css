@@ -4,8 +4,9 @@
 
 /* Container principal */
 .container {
+  
   display: flex;
-  height: 530px;
+  height: 100%;
   color: #fff;
   font-family: Arial, sans-serif;
   font-size: 20px;
@@ -51,6 +52,7 @@
   font-size: 1.9rem;
   color: #fff;
   transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
 }
 
 .icon:hover {
@@ -73,8 +75,9 @@
   flex: 1;
   padding: 30px;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   gap: 20px;
+  width: 800px;
 }
 
 .header h1 {
@@ -213,7 +216,7 @@
   }
 
   .sidebar {
-    margin-top: 750px;
+    margin-top: 620px;
     width: 100%;
     padding: 10px;
     box-shadow: none;
@@ -230,7 +233,7 @@
  
 
   .header h1 {
-    font-size: 8rem;
+    font-size: 6rem;
     margin: 60px 0 20px;
   }
   .header p {
@@ -240,12 +243,14 @@
   .highlightSection{
     display: flex;
     flex-wrap: wrap;
+    margin: 10px 0 0 60px;
+    max-width: 80%;
     width: 100%;
     
   }
 
   .skills{
-    margin-top: 400px;
+    margin-top: 390px;
   }
   .highlightSection h2,
   .skills h2 {
@@ -278,7 +283,7 @@
     width: 100%;
   }
   .sidebar {
-    margin-top: 600px; /* Ajuste conforme necessário */
+    margin-top: 700px; /* Ajuste conforme necessário */
   }
   .header h1 {
     font-size: 5rem;
@@ -293,6 +298,9 @@
   .portfolioLink,
   .features li {
     font-size: 0.9rem;
+  }
+  .skills{
+    margin-top: 500px;
   }
 
   .skillTags span {
