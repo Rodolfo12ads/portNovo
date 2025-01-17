@@ -96,32 +96,38 @@
   }
 
   .item {
-    margin: 10px 0;
     background: #111010;
     border-radius: 10px;
-    width: 220px;
+    width: 100%; /* Faz o item ocupar toda a largura do container */
     height: 50px;
     padding: 8px;
-
+    display: flex; /* Usado para centralizar o link */
+    justify-content: center;
   }
-
+  
   .item a {
     text-align: center;
     text-decoration: none;
     color: #ecf0f1;
-    font-size: 1.5rem; /* Ajuste o tamanho da fonte para telas menores */
+    font-size: 1.5rem;
     font-weight: bold;
-    transition: color 0.7s ease, opacity 0.7s ease; /* Transição de cor e opacidade */
-    
+    width: 100%; /* Faz o link ocupar todo o espaço dentro do li */
+    height: 100%; /* Garante que o link ocupe toda a altura do item */
+    display: flex; /* Faz o link se comportar como bloco */
+    justify-content: center; /* Alinha o texto do link ao centro */
+    align-items: center; /* Alinha o texto do link ao centro verticalmente */
+    transition: color 0.3s ease, opacity 0.5s ease;
   }
-
+  
   .item a:hover, 
   .item a:focus, 
   .item a:active {
-    color: #f1c40f; /* Cor quando em hover, focus ou ativo */
-    background: #111010; /* Cor de fundo opcional */
-    opacity: 0.7; /* Reduz a opacidade, fazendo o link desaparecer parcialmente */
+    color: #f1c40f;
+    opacity: 0.5;
+    background-color: rgba(255, 255, 255, 0.1);
   }
+  
+  
   .navbar {
     background-color: transparent;
     padding: 10px 20px;
@@ -183,31 +189,37 @@
   }
 
   .item {
-    margin: 10px 0;
-    background-color: #111010;
+    background: #111010;
     border-radius: 10px;
-    width: 100%; /* Largura total da tela */
+    width: 100%; /* Faz o item ocupar toda a largura do container */
     height: 50px;
     padding: 8px;
+    display: flex; /* Usado para centralizar o link */
+    justify-content: center;
   }
-
+  
   .item a {
     text-align: center;
     text-decoration: none;
     color: #ecf0f1;
-    font-size: 1.5rem; /* Ajuste o tamanho da fonte para telas menores */
+    font-size: 1.5rem;
     font-weight: bold;
-    transition: color 0.7s ease, opacity 0.7s ease; /* Transição de cor e opacidade */
-    
+    width: 100%; /* Faz o link ocupar todo o espaço dentro do li */
+    height: 100%; /* Garante que o link ocupe toda a altura do item */
+    display: flex; /* Faz o link se comportar como bloco */
+    justify-content: center; /* Alinha o texto do link ao centro */
+    align-items: center; /* Alinha o texto do link ao centro verticalmente */
+    transition: color 0.3s ease, opacity 0.5s ease;
   }
-
+  
   .item a:hover, 
   .item a:focus, 
   .item a:active {
-    color: #f1c40f; /* Cor quando em hover, focus ou ativo */
-    background: #111010; /* Cor de fundo opcional */
-    opacity: 0.7; /* Reduz a opacidade, fazendo o link desaparecer parcialmente */
+    color: #f1c40f;
+    opacity: 0.5;
+    background-color: rgba(255, 255, 255, 0.1);
   }
+  
   
 
   .navbar {
