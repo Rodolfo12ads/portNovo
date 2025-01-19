@@ -209,6 +209,7 @@
 /* Para telas menores que 768px (tablets e celulares) */
 @media (max-width: 768px) {
   .container {
+    align-items: center;
     position: relative;
     display:  flex;
     flex-direction: column;
@@ -216,6 +217,8 @@
   }
 
   .sidebar {
+    position: relative;
+    z-index: 1 ;
     margin-top: 620px;
     width: 100%;
     padding: 10px;
@@ -223,12 +226,13 @@
   }
 
   .mainContent {
-    position: absolute;
+  position:absolute;
   top: 0;
   left: 0;
   width: 100%;
-
-    padding: 20px;
+  padding: 20px;
+ align-items: center;
+  
   }
  
 
@@ -243,7 +247,7 @@
   .highlightSection{
     display: flex;
     flex-wrap: wrap;
-    margin: 10px 0 0 60px;
+    margin: auto;
     max-width: 80%;
     width: 100%;
     
@@ -273,15 +277,23 @@
 /* Para telas menores que 480px (celulares pequenos) */
 @media (max-width: 480px) {
   .container {
+    display: flex;
+    align-items: center;
     position: relative;
 
   }
   .mainContent {
+    
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
   }
+
+  .highlightSection{
+margin: auto;
+}
+  
   .sidebar {
     margin-top: 700px; /* Ajuste conforme necessário */
   }

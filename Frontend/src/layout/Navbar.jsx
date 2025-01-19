@@ -14,7 +14,7 @@ function Navbar() {
     }
   };
 
-  // Remove a classe do body caso o componente seja desmontado
+  // Limpa a classe do body ao desmontar o componente
   useEffect(() => {
     return () => {
       document.body.classList.remove("menuOpen");
@@ -24,22 +24,35 @@ function Navbar() {
   return (
     <header className={styles.navbar}>
       <nav className={styles.navContainer}>
+        {/* Botão de menu */}
         <button
-          className={styles.buttonCollapse}
+          className={`${styles.hamburgerButton} ${
+            isMenuOpen ? styles.active : ""
+          }`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <i className="material-icons">menu</i>
+          <span className={`${styles.bar}`}></span>
+          <span className={`${styles.bar}`}></span>
+          <span className={`${styles.bar}`}></span>
         </button>
+
+        {/* Menu de navegação */}
         <ul className={`${styles.list} ${isMenuOpen ? styles.menuMobile : ""}`}>
           <li className={styles.item}>
-            <Link to="/" onClick={toggleMenu}>Home</Link>
+            <Link to="/" onClick={toggleMenu}>
+              Home
+            </Link>
           </li>
           <li className={styles.item}>
-            <Link to="/portfolio" onClick={toggleMenu}>Portfólio</Link>
+            <Link to="/portfolio" onClick={toggleMenu}>
+              Portfólio
+            </Link>
           </li>
           <li className={styles.item}>
-            <Link to="/gallery" onClick={toggleMenu}>Galeria</Link>
+            <Link to="/gallery" onClick={toggleMenu}>
+              Galeria
+            </Link>
           </li>
         </ul>
       </nav>
