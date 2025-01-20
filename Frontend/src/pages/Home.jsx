@@ -81,7 +81,7 @@ function Home() {
           </p>
         </header>
         <section className={styles.highlightSection}>
-          <h2>Por que Escolher-me?</h2>
+          <h2 translate="no">Por que Escolher-me?</h2>
           <ul className={styles.features}>
             <li>
               <strong>Início Promissor:</strong> Começando minha jornada no desenvolvimento Fullstack.
