@@ -8,8 +8,19 @@ import { fileURLToPath } from 'url';
 const app = express();
 const prisma = new PrismaClient();
 
+// Middlewares
 app.use(cors()); // Permite requisições de outros domínios
 app.use(express.json()); // Middleware para suportar JSON no corpo das requisições
+
+// Variáveis para caminho do arquivo e diretório
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Middleware para servir os arquivos estáticos do frontend
+const frontendPath = path.join(__dirname, '../Frontend/dist');
+app.use(express.static(frontendPath));
+
+// Rotas
 
 // Rota para criar usuários no banco de dados
 app.post('/usuarios', async (req, res) => {
@@ -42,24 +53,16 @@ app.get('/usuarios', async (req, res) => {
   }
 });
 
-// Variáveis para caminho do arquivo e diretório
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Middleware para servir os arquivos estáticos do frontend
-const frontendPath = path.join(__dirname, '../Frontend/dist');
-app.use(express.static(frontendPath));
-
-// Rota fallback para React Router (verifica se o diretório existe)
+// Rota fallback para React Router (serve o `index.html`)
 app.get('*', (req, res) => {
   const indexPath = path.join(frontendPath, 'index.html');
 
-  if (!path.existsSync(indexPath)) {
-    console.error(`Arquivo não encontrado: ${indexPath}`);
-    return res.status(404).send('Frontend não encontrado.');
-  }
-
-  res.sendFile(indexPath);
+  res.sendFile(indexPath, (err) => {
+    if (err) {
+      console.error(`Erro ao servir o arquivo index.html: ${err.message}`);
+      res.status(500).send('Erro ao carregar o frontend.');
+    }
+  });
 });
 
 // Inicializa o servidor na porta 3000
@@ -74,4 +77,11 @@ app.listen(PORT, async () => {
   } catch (error) {
     console.error('Erro ao conectar ao banco de dados:', error);
   }
+});
+
+// Encerra a conexão com o Prisma ao fechar o servidor
+process.on('SIGINT', async () => {
+  await prisma.$disconnect();
+  console.log('Conexão com o banco de dados encerrada.');
+  process.exit(0);
 });

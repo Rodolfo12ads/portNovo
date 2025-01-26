@@ -1,10 +1,8 @@
-import axios from 'axios'
+import axios from 'axios';
 
 const api = axios.create({
-    baseURL: "https://portfolio-6e8a.onrender.com",
-})
+    baseURL: "https://port-novo-backend.vercel.app", // Use a URL do backend no Vercel
+});
 
-//  depois de ter configurado o axi como esta é so 
-//  importar no index do projeto 
-
-export default api
+// Agora você pode importar o `api` em outros arquivos e fazer requisições.
+export default api;
