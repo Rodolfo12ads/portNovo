@@ -1,8 +1,10 @@
-import axios from 'axios';
+import axios from 'axios'
 
 const api = axios.create({
-    baseURL: "https://port-novo-backend.vercel.app", // Use a URL do backend no Vercel
-});
+    baseURL: "https://proud-enchantment-production.up.railway.app/",
+})
 
-// Agora você pode importar o `api` em outros arquivos e fazer requisições.
-export default api;
+//  depois de ter configurado o axi como esta é so 
+//  importar no index do projeto 
+
+export default api
