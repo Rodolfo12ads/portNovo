@@ -41,7 +41,7 @@ function Navbar() {
         <ul className={`${styles.list} ${isMenuOpen ? styles.menuMobile : ""}`}>
           <li className={styles.item}>
             <Link to="/" onClick={toggleMenu}>
-              Home
+              Pagina inicial
             </Link>
           </li>
           <li className={styles.item}>

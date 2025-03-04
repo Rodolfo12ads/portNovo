@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import logo from '../assets/youtube_logo.png';
-import udemy_logo from '../assets/udemy_logo.png';
+import udemy_logo from '../assets/udemy_logo1.svg';
 
 import { AiFillGithub } from "react-icons/ai"
 import styles from "./Portifolio.module.css";
@@ -26,7 +26,7 @@ function Portfolio() {
         ))}
       </div>
       <nav className={styles.nav}>
-        <button onClick={() => setShowCursos(!showCursos)}>{!showCursos ? 'Exibir Cursos' : 'Fechar'}</button>
+        { <p onClick={() => setShowCursos(!showCursos)}>{!showCursos ? 'Exibir Cursos' : 'Fechar'}</p> }
       </nav>
 
       {showCursos && (
@@ -38,7 +38,7 @@ function Portfolio() {
           <div className={styles.divider}></div>
           <h2>Luiz Otávio Miranda <a href="https://www.udemy.com/course/curso-de-javascript-moderno-do-
           // basico-ao-avancado/?couponCode=KEEPLEARNINGBR"
-            target="_blank"><img className={styles.logo} src={udemy_logo} alt="logo udemy" /></a></h2>
+            target="_blank"><img className={styles.logo}  src={udemy_logo} alt="logo udemy" /><p className={styles.iconudemy}>demy</p> </a></h2>
           <p>
             JavaScript e TypeScript - front-end e back-end Full Stack Node,
             Express, noSQL, React, hooks, Redux, Design Patterns.
@@ -50,19 +50,24 @@ function Portfolio() {
         <h2>Projetos Desenvolvidos</h2>
         <div className={styles.gallery}>
           {[{
+            Projeto: "Projeto portfólio atual",
             src: "https://drive.google.com/file/d/1Hd_vitVogOTHCpHrhj0xoWCyNiZfLOJQ/preview",
             skills: ["React Vite", "Node.js", "MongoDB"],
-            gitLink: "https://github.com/seu-usuario" // Link do GitHub
+            gitLink: "https://github.com/Rodolfo12ads/portNovo", // Link do GitHub
           },
           {
+            Projeto: "Clique para abrir o projeto Cost",
             src: "https://drive.google.com/file/d/1HdaHCsVRB8QdLnziPI8PMj8M0lpKbEUX/preview",
             skills: ["React", "Node.js", "DB Json"],
-            gitLink: "https://github.com/Rodolfo12ads/costs" // Link do GitHub
+            gitLink: "https://github.com/Rodolfo12ads/costs", // Link do GitHub
+            linkversel: ["https://costs-gamma-livid.vercel.app/" ]
+
           },
           {
+            Projeto: "Logo estará disponivel",
             src: "https://drive.google.com/file/d/1HgdZh7UrHrbnzubFkXbNCpjbwqT5m49l/preview",
             skills: ["React Vite", "Node.js", "MongoDB"],
-            gitLink: "https://github.com/seu-usuario" // Link do GitHub
+            gitLink: "https://github.com/Rodolfo12ads/CadastroUsuarios" // Link do GitHub
           }
           ].map((project, index) => (
             <div key={index} className={styles.projectCard}>
@@ -84,6 +89,14 @@ function Portfolio() {
                   aria-label="GitHub"
                 >
                   <AiFillGithub />
+                </a>
+                <a className={styles.skillpag}
+                href={project.linkversel}
+                target="_blank"
+                aria-label="Projeto Custo"
+                >
+                  <p>{project.Projeto}</p>
+                  
                 </a>
               </div>
             </div>

@@ -40,10 +40,12 @@
   font-size: 1.2rem;
   font-weight: bold;
   transition: color 0.3s, transform 0.3s ease;
+  text-shadow: 2px 4px 9px rgba(0, 0, 0, 0.9);
 }
 
 .item a:hover {
   color: #f1c40f;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.9);
 }
 
 /* Botão de menu para telas menores */

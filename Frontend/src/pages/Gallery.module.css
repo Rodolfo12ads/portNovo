@@ -5,7 +5,7 @@
 }
 
 h1 {
-    
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6); 
     color: #f0c040;
     margin-bottom: 30px;
 }
@@ -21,7 +21,6 @@ h1 {
     width: 300px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -33,12 +32,14 @@ h1 {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 p {
     font-size: 1rem;
     color: #9d9797;
     margin-top: 10px;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* Fundo animado */

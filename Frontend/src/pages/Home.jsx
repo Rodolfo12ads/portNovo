@@ -34,7 +34,7 @@ function Home() {
         <p>
           Olá, meu nome é {user ? user.nome : "Rodolfo"},
           estou iniciando minha jornada como desenvolvedor Fullstack,
-           aprendendo a criar experiências digitais modernas e interativas.
+          aprendendo a criar experiências digitais modernas e interativas.
         </p>
         <p>
           Descubra mais sobre meu trabalho:{" "}
@@ -44,9 +44,7 @@ function Home() {
         </p>
         <div className={styles.socialIcons}>
           <a
-            href={user ? user.email : "email@gmail.com"}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:${user ? user.gmail : "email@gmail.com"}?subject=Assunto&body=Olá,%20gostaria%20de%20entrar%20em%20contato!`}
             className={`${styles.icon} ${styles.email}`}
             aria-label="Enviar Email"
           >
@@ -74,7 +72,7 @@ function Home() {
       </aside>
       <main className={styles.mainContent}>
         <header className={styles.header}>
-          <h1 translate="no">Bem-vindo</h1>
+          <h1 >Bem-vindo</h1>
           <p>
             Transformo ideias em realidade com projetos que unem inovação,
             funcionalidade e design.
@@ -100,10 +98,13 @@ function Home() {
             <span>React</span>
             <span>Node.js</span>
             <span>JavaScript</span>
-            <span>MongoDB</span>
             <span>HTML5</span>
             <span>CSS3</span>
             <span>Git</span>
+            <span>C#</span>
+            <span>MongoDB</span>
+            <span>MySql</span>
+            <span>SqlServer</span>
           </div>
         </section>
       </main>
