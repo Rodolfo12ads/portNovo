@@ -30,14 +30,14 @@
 }
 
 .nav p:hover {
-  background: linear-gradient(135deg, #f0c040, #ffdb70);
-  color: #222;
+  
   transform: translateY(-4px) scale(1.05);
 }
 
 .nav p:active {
-  transform: translateY(0) scale(0.98);
+  transform: translateY(0) scale(1.1);
   box-shadow: 0 3px 8px rgba(249, 246, 246, 0.2);
+  
 }
 
 
@@ -144,7 +144,7 @@
   transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+
 }
 
 .videoCard.expanded {
